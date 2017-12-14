@@ -40,25 +40,6 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
         .pipe(browserSync.stream({})); // Обновляем CSS на странице при изменении
 });
 
-/*png-sprite*/
-gulp.task('png-sprite', function () {// PNG Sprites
-    var spriteData =
-        gulp.src('app/img/sprites/*.*')// путь, откуда берем картинки для спрайта
-            .pipe(spritesmith({
-                imgName: 'sprite.png',//имя генерируемой картинки
-                cssName: '_png-sprite.sass',//имя css файла, который получится на выходе
-                cssFormat: 'sass',//формат css файла
-                algorithm: 'binary-tree',//способ сортировки изображений
-                cssTemplate: 'sass.template.mustache',//функция или путь до mustache шаблона, дающие возможность настроить CSS-файл на выходе
-                cssVarMap: function (sprite) {//цикл, настраивающий названия CSS переменных
-                    sprite.name = 's-' + sprite.name
-                }
-            }));
-
-    spriteData.img.pipe(gulp.dest('./public/img/sprites/'));// путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('app/sass/libs/'));// путь, куда сохраняем стили
-});
-
 /*sass*/
 gulp.task('sass', function () { // Создаем таск Sass
     var processors = [// подключаем постпроцессоры в массиве
@@ -66,7 +47,7 @@ gulp.task('sass', function () { // Создаем таск Sass
         short,
         fontmagic,
         fixes,
-        autoprefixer(['last 5 versions', '> 5%', 'ie 8', 'ie 7', 'ie 9', 'safari 5', 'opera 12.1', 'ios 6', 'android 4'], {
+        autoprefixer(['last 25 versions', '> 5%', 'ie 8', 'ie 7', 'ie 9', 'safari 5', 'opera 12.1', 'ios 6', 'android 4'], {
             cascade: true
         }),
         sorting(),
@@ -103,31 +84,6 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
     });
 });
 
-/*vendor*/
-gulp.task('vendor', ['clean'], function () {
-    return gulp.src(['app/js-libs/jquery-2.1.3.min.js',
-        'app/js-libs/jquery-ui.min.js',
-        'app/js-libs/bootstrap.min.js',
-        'app/js-libs/jquery.fancybox.js',
-        'app/js-libs/fileinput.js',
-        'app/js-libs/jquery.jscrollpane.min.js',
-        'app/js-libs/jquery.mousewheel.js',
-        'app/js-libs/perfect-scrollbar.jquery.js',
-        'app/js-libs/lightbox.min.js',
-        'app/js-libs/countdown.js',
-        'app/js-libs/map.js',
-        'app/js-libs/validation.js',
-        'app/js-libs/fotorama.js',
-        'app/js-libs/slick.js',
-        'app/js-libs/owl.carousel.min.js'])// Берем все необходимые библиотеки
-        .pipe(plumber())
-        .pipe(concat('vendor.js'))// Собираем их в кучу в новом файле vendor.js
-        .pipe(rename({}))
-        /*.pipe(uglify()) // Сжимаем JS файл*/
-        .pipe(plumber.stop())
-        .pipe(gulp.dest('./public/js'));// Выгружаем в папку js
-});
-
 /*compress*/
 gulp.task('compress', ['clean'], function () {// Создаем таск compress
     return gulp.src('app/js/*.js')// Берем все необходимые библиотеки
@@ -150,13 +106,16 @@ gulp.task("clean", function (cb) {
 });
 
 /*jade */
-gulp.task('jade', function() {
+gulp.task('jade', function () {
     gulp.src('app/template/pages/*.jade')
         .pipe(plumber())
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest('./public'));
+        .pipe(gulp.dest('./public'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 gulp.task('watch', ['compress', 'jade', 'css-libs', 'img', 'sass'], function () {
@@ -192,5 +151,5 @@ gulp.task('clear', function (callback) {
 gulp.task('default', ['watch', 'browser-sync']);
 
 /*
-npm i gulp gulp-sass browser-sync gulp-jade gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-short stylefmt postcss-assets postcss-sorting postcss-font-magician postcss-fixes --save-dev
-*/
+ npm i gulp gulp-sass browser-sync gulp-jade gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-short stylefmt postcss-assets postcss-sorting postcss-font-magician postcss-fixes --save-dev
+ */
