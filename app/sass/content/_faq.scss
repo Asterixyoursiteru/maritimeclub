@@ -42,6 +42,7 @@
       padding-top: 34px;
       padding-left: 32px;
       padding-right: 32px;
+      @include box-sizing(border-box);
       //padding-bottom: 29px;
       @include breakpoint(max-width 660px){
         padding-top: 10px;

@@ -5,6 +5,9 @@
     float: left;
     width: calc(100% - (54px + 23px));
     width: -moz-calc(100% - (54px + 23px));
+    @include breakpoint(max-width 1024px){
+      width: 100%;
+    }
     @include breakpoint(max-width 660px){
       width: 100%;
     }
@@ -94,14 +97,19 @@
         margin: 0 15px;
         padding-top: 29px;
         padding-bottom: 23px;
+        color: #666666;
         font-size: 12px;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.6px;
+        @include breakpoint(max-width 1024px){
+          font-size: 10px;
+        }
         @include breakpoint(max-width 660px){
           width: 100%;
           margin: 0;
           color: #fff;
+          font-size: 12px;
         }
         &:hover{
           color: #03274c;

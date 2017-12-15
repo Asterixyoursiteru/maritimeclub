@@ -1,0 +1,36 @@
+.socials{
+  position: fixed;
+  width: 24px;
+  height: 130px;
+  top: calc(50% - (130px/2));
+  left: 76px;
+  z-index: 1;
+  //margin-top: -moz-calc(50% - (130px/2));
+  &__link{
+    position: relative;
+    float: left;
+    size: 24px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    &.facebook{
+      background-image: url('../img/icons/facebook.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.twitter{
+      background-image: url('../img/icons/twitter.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.vk{
+      background-image: url('../img/icons/vk.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.instagram{
+      background-image: url('../img/icons/instagram.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

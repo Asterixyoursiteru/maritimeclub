@@ -8,17 +8,21 @@ $(document).ready(function () {
         menu.slideToggle('slow');
         return false;
     });
-    $(document).on('click', function (e) {
-        if ($(e.target).closest('.header__navigation').length != 1) {
-            $('.header__nav').slideUp('500');
-            $('#mobile-menu').removeClass('js-trigger-active');
-        }
-    });
+    if(window.innerWidth < 756){
+        $(document).on('click', function (e) {
+            if ($(e.target).closest('.header__navigation').length != 1) {
+                $('.header__nav').slideUp('500');
+                $('#mobile-menu').removeClass('js-trigger-active');
+            }
+        });
+    }
+   
     /*close*/
 
     /*gallerylider*/
     $(window).on('load resize', function () {
-        gallerySlider();        
+        gallerySlider();
+        cardsSlider()
     });
     /*close*/
 
@@ -48,6 +52,30 @@ $(document).ready(function () {
 function gallerySlider() {
     if($(document).width() < 770){
         $('#gallery-slider').slick({
+            infinite: true,
+            dots: true,
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 696,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        })
+    }
+};
+
+/*gallery slider*/
+function cardsSlider() {
+    if($(document).width() < 770){
+        $('#cards-slider').slick({
             infinite: true,
             dots: true,
             arrows: false,
