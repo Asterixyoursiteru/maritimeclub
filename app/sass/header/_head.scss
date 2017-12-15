@@ -14,6 +14,10 @@
     margin-top: 11px;
     margin-right: 33px;
     margin-bottom: 9px;
+    @include breakpoint(max-width 660px){
+      margin-left: calc(50% - (54px/2));
+      margin-left: -moz-calc(50% - (54px/2));
+    }
     img, svg{
       size: 100%;
       object-fit: contain;
@@ -25,6 +29,13 @@
     width: 162px;
     top: 0;
     right: -162px;
+    @include breakpoint(max-width 660px){
+      position: relative;
+      float: left;
+      right: 0;
+      width: 100%;
+      margin-bottom: 15px;
+    }
     &--user{
       display: block;
       position: relative;

@@ -1,4 +1,4 @@
-.footer{
+.footer {
   display: block;
   position: relative;
   float: left;
@@ -6,34 +6,51 @@
   background-color: #002947;
   padding-top: 44px;
   border-top: 2px solid #fff;
-  &__logo{
+  @include breakpoint(max-width 660px) {
+    padding-top: 10px;
+  }
+  &__logo {
     display: block;
     position: relative;
     float: left;
     width: 54px;
     height: 48px;
     overflow: hidden;
-    img, svg{
+    @include breakpoint(max-width 660px) {
+      margin-left: calc(50% - (54px / 2));
+      margin-left: -moz-calc(50% - (54px / 2));
+      margin-bottom: 10px;
+    }
+    img, svg {
       size: 100%;
       object-fit: contain;
     }
   }
-  &__box{
+  &__box {
     display: block;
     position: relative;
     float: left;
     width: calc(100% - (54px + 168px));
     width: -moz-calc(100% - (54px + 168px));
     margin-bottom: 51px;
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
-  &__links{
+  &__links {
     display: block;
     position: relative;
     float: left;
     width: 50%;
     padding-left: 120px;
     @include box-sizing(border-box);
-    &--title{
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+    &--title {
       position: relative;
       float: left;
       width: 100%;
@@ -45,7 +62,7 @@
       text-transform: uppercase;
       letter-spacing: 0.51px;
     }
-    ul{
+    ul {
       position: relative;
       float: left;
       width: 100%;
@@ -56,9 +73,9 @@
       -moz-column-count: 2; /* Firefox */
       -webkit-column-count: 2; /* Safari and Chrome */
       column-count: 2;
-      li{
+      li {
         position: relative;
-        a{
+        a {
           display: block;
           position: relative;
           float: left;
@@ -71,7 +88,7 @@
         }
       }
     }
-    &--element{
+    &--element {
       display: block;
       position: relative;
       float: left;
@@ -84,12 +101,15 @@
       letter-spacing: 0.49px;
     }
   }
-  &__socials{
+  &__socials {
     display: block;
     position: relative;
     float: left;
     width: 168px;
-    &--link{
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+    &--link {
       position: relative;
       float: left;
       width: 24px;
@@ -97,26 +117,29 @@
       overflow: hidden;
       margin-right: 21px;
       margin-bottom: 15px;
-      &.facebook{
+      &.facebook {
         background-image: url('../img/icons/facebook.svg');
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
       }
-      &.twitter{
+      &.twitter {
         background-image: url('../img/icons/twitter.svg');
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
         margin-right: 50%;
+        @include breakpoint(max-width 660px) {
+          margin-right: 21px;
+        }
       }
-      &.instagram{
+      &.instagram {
         background-image: url('../img/icons/instagram.svg');
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
       }
-      &.vk{
+      &.vk {
         background-image: url('../img/icons/vk.svg');
         background-repeat: no-repeat;
         -webkit-background-size: contain;
@@ -124,13 +147,13 @@
       }
     }
   }
-  &__art{
+  &__art {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     border-top: 3px solid #fff;
-    p{
+    p {
       position: relative;
       float: left;
       width: 100%;

@@ -43,6 +43,11 @@
       padding-left: 32px;
       padding-right: 32px;
       //padding-bottom: 29px;
+      @include breakpoint(max-width 660px){
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 50px;
+      }
     }
     &--element.js-faq-wrapper{
       border: 1px solid #00365f;
@@ -58,6 +63,14 @@
       font-size: 28px;
       font-family: $ProximaNovaBold;
       margin-bottom: 26px;
+      &:hover, &:focus{
+        color: #fff;
+      }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
     }
     &--trigger.js-faq-show{
       color: #00335f;
@@ -74,6 +87,12 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+      @include breakpoint(max-width 660px){
+        position: absolute;
+        margin: 0;
+        top:0;
+        right: -35px;
+      }
     }
     &--icon.js-faq-icon{
       background-image: url('../img/icons/x.svg');
