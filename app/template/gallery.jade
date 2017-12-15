@@ -2,7 +2,7 @@ section.gallery
     .container
         h1.page-title Галерея
 
-        .gallery__photos
+        #gallery-slider.gallery__photos
             a(href='img/gallery-1.png' data-fancybox="gallery").gallery__photos--element
               img(src='img/gallery-1.png', alt='photo')
 
@@ -35,7 +35,7 @@ section.gallery
 
         h3.page-title Видео
 
-            video(controls='controls', poster='img/video-bg.png').gallery__video
+        video(controls='controls', poster='img/video-bg.png').gallery__video
                 source(src='video/duel.ogv', type='video/ogg; codecs="theora, vorbis"')
                 source(src='video/duel.webm', type='video/webm; codecs="vp8, vorbis"')
                 a(href='video/duel.mp4')

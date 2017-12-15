@@ -11,6 +11,56 @@
   }
   &__trigger{
     display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -56px;
+    right: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+    z-index: 15;
+    @include breakpoint(max-width 660px) {
+      display: block;
+    }
+    span{
+      display: block;
+      height: 2px;
+      width: 18px;
+      background-color: #00365f;
+      position: absolute;
+      left: 50%;
+      margin-left: -9px;
+      top: 50%;
+      margin-top: -1px;
+    }
+    span:first-of-type {
+      transition: all 0.2s;
+      margin-top: -6px;
+      content: '';
+    }
+    span:last-of-type {
+      transition: all 0.2s;
+      margin-top: 4px;
+      content: '';
+    }
+  }
+  &__trigger.js-trigger-active{
+    background-color: #03274c;
+    span:nth-of-type(2){
+      display: none;
+    }
+    span {
+      background-color: #fff;
+      &:first-of-type {
+        transform: rotate(135deg);
+        margin-top: 0;
+      }
+      &:last-of-type {
+        transform: rotate(-134deg);
+        margin-top: 0;
+      }
+    }
   }
   &__nav{
     @include display-flex(flex);
@@ -23,6 +73,12 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    @include breakpoint(max-width 660px) {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      background-color: rgba(3,39,76,0.95);
+    }
     li{
       position: relative;
       float: left;
@@ -45,10 +101,14 @@
         @include breakpoint(max-width 660px){
           width: 100%;
           margin: 0;
+          color: #fff;
         }
         &:hover{
           color: #03274c;
           font-family: $ProximaNovaBold;
+          @include breakpoint(max-width 660px){
+            color: #fff;
+          }
           &:after{
             display: block;
             position: absolute;
@@ -59,6 +119,9 @@
             left: -15px;
             bottom: -1px;
             background-color: #00365f;
+            @include breakpoint(max-width 660px){
+              background-color: #fff;
+            }
           }
         }
       }

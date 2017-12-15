@@ -1,5 +1,27 @@
 $(document).ready(function () {
 
+    /*mobile menu*/
+    $(document).on('click', '#mobile-menu', function (event) {
+        event.preventDefault();
+        var menu = $(this).next('.header__nav');
+        $(this).toggleClass('js-trigger-active');
+        menu.slideToggle('slow');
+        return false;
+    });
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('.header__navigation').length != 1) {
+            $('.header__nav').slideUp('500');
+            $('#mobile-menu').removeClass('js-trigger-active');
+        }
+    });
+    /*close*/
+
+    /*gallerylider*/
+    $(window).on('load resize', function () {
+        gallerySlider();        
+    });
+    /*close*/
+
     /*show faq acardeon*/
     $(document).on('click', '.faq__wrapper--trigger', function (event) {
        event.preventDefault();
@@ -21,3 +43,27 @@ $(document).ready(function () {
     /*close*/
 
 });
+
+/*gallery slider*/
+function gallerySlider() {
+    if($(document).width() < 770){
+        $('#gallery-slider').slick({
+            infinite: true,
+            dots: true,
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 696,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        })
+    }
+};
