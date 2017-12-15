@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Share@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Gallery" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1115.000000, -961.000000)" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Video_Player" transform="translate(251.000000, 928.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Share" transform="translate(865.000000, 34.000000)">
+                <path d="M16,10.8105 L16,13.8075 C16,14.4095 15.511,14.8975 14.91,14.8975 L1.09,14.8975 C0.489,14.8975 0,14.4095 0,13.8075 L0,10.8105" id="Stroke-1"></path>
+                <path d="M8,1.2343 L8,9.3333" id="Stroke-3"></path>
+                <polyline id="Stroke-5" points="3.7896 4.2104 8.0006 0.0004 12.2106 4.2104"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

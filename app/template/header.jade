@@ -1,1 +1,23 @@
 header.header
+    .container
+        a(href='#').header__logo
+            img(src='img/icons/manc_logo_blue@2x.svg', alt='logo')
+
+        nav.header__navigation
+            a.header__trigger
+            ul.header__nav
+                li: a(href='#' target='_blank') О проекте
+                li: a(href='#' target='_blank') Клубные карты
+                li: a(href='#' target='_blank') Флот и отель
+                li: a(href='#' target='_blank') Партнеры
+                li: a(href='#' target='_blank') Галерея
+                li: a(href='news.html' target='_blank') Новости
+                li: a(href='#' target='_blank') Документы
+                li: a(href='#' target='_blank') Контакты
+
+            .header__toolbar
+                a(href='#').header__toolbar--user
+                div.header__form-box
+                    form.header__form
+                        input(type='text' placeholder='Логин').header__form--field
+                        input(type='text' placeholder='Пароль').header__form--field

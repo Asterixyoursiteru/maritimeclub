@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>GB@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="12" height="8.57142857" rx="2"></rect>
+    </defs>
+    <g id="Desktop_MAC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1286.000000, -89.000000)">
+        <g id="Group-3" transform="translate(1272.000000, 36.000000)">
+            <g id="GB" transform="translate(14.000000, 53.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Mask-Copy" fill="#0A17A7" mask="url(#mask-2)" x="0" y="0" width="12" height="8.57142857"></rect>
+                <path d="M2.86017482,5.71428571 L-1.33226763e-15,5.71428571 L-1.33226763e-15,2.85714286 L2.86017482,2.85714286 L-1.18870726,0.126137413 L-0.549629656,-0.821334099 L4.57142857,2.63286329 L4.57142857,-0.571428571 L7.42857143,-0.571428571 L7.42857143,2.63286329 L12.5496297,-0.821334099 L13.1887073,0.126137413 L9.13982518,2.85714286 L12,2.85714286 L12,5.71428571 L9.13982518,5.71428571 L13.1887073,8.44529116 L12.5496297,9.39276267 L7.42857143,5.93856528 L7.42857143,9.14285714 L4.57142857,9.14285714 L4.57142857,5.93856528 L-0.549629656,9.39276267 L-1.18870726,8.44529116 L2.86017482,5.71428571 Z" id="Rectangle-2" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <path d="M8.00055804,2.71379743 L13.4285714,-0.857142857" id="Line" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)"></path>
+                <path d="M8.5769043,9.15014648 L13.4428362,5.87036133" id="Line-Copy-2" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)" transform="translate(11.009870, 7.510254) scale(1, -1) translate(-11.009870, -7.510254) "></path>
+                <path d="M3.43094308,2.70448521 L-1.64463588,-0.716134208" id="Line-Copy" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)"></path>
+                <path d="M3.98144531,9.56162807 L-1.64463588,5.83067104" id="Line-Copy-3" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)" transform="translate(1.168405, 7.696150) scale(1, -1) translate(-1.168405, -7.696150) "></path>
+                <polygon id="Rectangle-2-Copy-3" fill="#E6273E" mask="url(#mask-2)" points="0 5.14285714 5.14285714 5.14285714 5.14285714 8.57142857 6.85714286 8.57142857 6.85714286 5.14285714 12 5.14285714 12 3.42857143 6.85714286 3.42857143 6.85714286 0 5.14285714 0 5.14285714 3.42857143 0 3.42857143"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

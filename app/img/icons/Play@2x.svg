@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Play@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Gallery" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-301.000000, -1449.000000)">
+        <g id="Video_Player" transform="translate(251.000000, 928.000000)" fill="#FFFFFF">
+            <g id="Timeline" transform="translate(38.000000, 502.000000)">
+                <path d="M13.548437,19 C13.2805574,19 13.013452,19.068918 12.7742185,19.2075285 C12.2949773,19.483975 12,19.9942783 12,20.5479458 L12,35.4505055 C12,36.0041729 12.2949773,36.516025 12.7742185,36.7924715 C13.013452,36.9303076 13.2805574,37 13.548437,37 C13.8163167,37 14.0818736,36.9303076 14.3226556,36.7924715 L27.2257815,29.3408045 C27.7042485,29.0643579 28,28.5532803 28,27.9996128 C28,27.4459454 27.7042485,26.9348677 27.2257815,26.6584212 L14.3226556,19.2075285 C14.0818736,19.068918 13.8163167,19 13.548437,19 M13.548437,20.5479458 L26.451563,27.9996128 L13.548437,35.4505055 L13.548437,20.5479458" id="Play"></path>
+            </g>
+        </g>
+    </g>
+</svg>

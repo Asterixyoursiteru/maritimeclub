@@ -1,0 +1,45 @@
+.header{
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  &__logo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 54px;
+    height: 48px;
+    overflow: hidden;
+    margin-top: 11px;
+    margin-bottom: 9px;
+    img, svg{
+      size: 100%;
+      object-fit: contain;
+    }
+  }
+  &__toolbar{
+    display: block;
+    position: absolute;
+    width: 162px;
+    top: 0;
+    right: -162px;
+    &--user{
+      display: block;
+      position: relative;
+      float: left;
+      width: 25px;
+      height: 25px;
+      margin-top: 23px;
+      margin-left: 15px;
+      overflow: hidden;
+      background-image: url('../img/icons/profile.svg');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+  }
+  &__form-box{
+    display: none;
+  }
+}

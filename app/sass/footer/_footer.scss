@@ -1,0 +1,112 @@
+.footer{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #002947;
+  padding-top: 44px;
+  border-top: 2px solid #fff;
+  &__logo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 54px;
+    height: 48px;
+    overflow: hidden;
+    img, svg{
+      size: 100%;
+      object-fit: contain;
+    }
+  }
+  &__box{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (54px + 168px));
+    width: -moz-calc(100% - (54px + 168px));
+  }
+  &__links{
+    display: block;
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 120px;
+    @include box-sizing(border-box);
+    &--title{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-family: $ProximaNovaBold;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.51px;
+    }
+    ul{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      list-style-position: inside;
+      -moz-column-count: 2; /* Firefox */
+      -webkit-column-count: 2; /* Safari and Chrome */
+      column-count: 2;
+      li{
+        position: relative;
+        a{
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          color: #ffffff;
+          font-size: 12px;
+          line-height: 25px;
+          text-transform: uppercase;
+          letter-spacing: 0.55px;
+        }
+      }
+    }
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.49px;
+    }
+  }
+  &__socials{
+    display: block;
+    position: relative;
+    float: left;
+    width: 168px;
+  }
+  &__art{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    border-top: 3px solid #fff;
+    p{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 26px;
+      margin-bottom: 24px;
+      text-align: center;
+      color: #ffffff;
+      font-family: $ProximaNovaSemibold;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+    }
+  }
+}

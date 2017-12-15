@@ -1,0 +1,90 @@
+.faq{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #00365f;
+  padding-bottom: 80px;
+  &__title{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 57px;
+    margin-bottom: 50px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 28px;
+    &:after{
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -19px;
+      width: 30px;
+      height: 1px;
+      background-color: rgba(255,255,255,0.26);
+    }
+  }
+  &__wrapper{
+    position: relative;
+    float: left;
+    width: 100%;
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      margin-bottom: 1px;
+      padding-top: 34px;
+      padding-left: 32px;
+      padding-right: 32px;
+      //padding-bottom: 29px;
+    }
+    &--element.js-faq-wrapper{
+      border: 1px solid #00365f;
+      background-color: #ffffff;
+    }
+    &--trigger{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 21px);
+      width: -moz-calc(100% - 21px);
+      color: #000000;
+      font-size: 28px;
+      margin-bottom: 26px;
+    }
+    &--trigger.js-faq-show{
+      color: #03284c;
+    }
+    &--icon{
+      display: block;
+      position: relative;
+      float: right;
+      width: 21px;
+      height: 21px;
+      margin-top: 1px;
+      overflow: hidden;
+      background-image: url('../img/icons/plus.svg');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    &--icon.js-faq-icon{
+      background-image: url('../img/icons/x.svg');
+    }
+    &--box{
+      display: none;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #03284c;
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 46px;
+    }
+  }
+}
