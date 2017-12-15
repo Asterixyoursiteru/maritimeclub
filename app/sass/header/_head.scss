@@ -12,7 +12,7 @@
     height: 48px;
     overflow: hidden;
     margin-top: 11px;
-    margin-right: 33px;
+    margin-right: 23px;
     margin-bottom: 9px;
     @include breakpoint(max-width 660px){
       margin-left: calc(50% - (54px/2));
