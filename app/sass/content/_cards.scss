@@ -6,4 +6,36 @@
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  &__top-descr{
+    position: relative;
+    float: left;
+    width: 692px;
+    margin-left: calc(50% - (692px/2));
+    margin-left: -moz-calc(50% - (692px/2));
+    > p{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+      color: #00365f;
+      font-size: 18px;
+      line-height: 25px;
+      > b{
+        margin: 0 5px;
+      }
+    }
+  }
+  &__title{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 52px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #00365f;
+    font-family: $ProximaNovaBold;
+    font-size: 28px;
+  }
 }
