@@ -5,7 +5,9 @@
   top: calc(50% - (130px/2));
   left: 76px;
   z-index: 1;
-  //margin-top: -moz-calc(50% - (130px/2));
+  @include breakpoint(max-width 1023px){
+    display: none;
+  }
   &__link{
     position: relative;
     float: left;
