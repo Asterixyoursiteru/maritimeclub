@@ -3,8 +3,8 @@
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - 54px);
-    width: -moz-calc(100% - 54px);
+    width: calc(100% - (54px + 33px));
+    width: -moz-calc(100% - (54px + 33px));
   }
   &__trigger{
     display: none;
@@ -32,13 +32,13 @@
         margin: 0 15px;
         padding-top: 29px;
         padding-bottom: 23px;
-        color: #535353;
         font-size: 12px;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.6px;
         &:hover{
-          color: #03284c;
+          color: #03274c;
+          font-family: $ProximaNovaBold;
           &:after{
             display: block;
             position: absolute;

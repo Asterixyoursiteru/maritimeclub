@@ -24,6 +24,7 @@
     float: left;
     width: calc(100% - (54px + 168px));
     width: -moz-calc(100% - (54px + 168px));
+    margin-bottom: 51px;
   }
   &__links{
     display: block;
@@ -88,6 +89,40 @@
     position: relative;
     float: left;
     width: 168px;
+    &--link{
+      position: relative;
+      float: left;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      margin-right: 21px;
+      margin-bottom: 15px;
+      &.facebook{
+        background-image: url('../img/icons/facebook.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+      &.twitter{
+        background-image: url('../img/icons/twitter.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        margin-right: 50%;
+      }
+      &.instagram{
+        background-image: url('../img/icons/instagram.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+      &.vk{
+        background-image: url('../img/icons/vk.svg');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
   }
   &__art{
     display: block;
