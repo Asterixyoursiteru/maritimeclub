@@ -5,6 +5,7 @@
   background-color: #fff;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: -2px;
+  z-index: 1;
   &__logo{
     display: block;
     position: relative;
@@ -124,6 +125,125 @@
       color: #597d97;
       font-size: 12px;
       text-decoration: underline;
+    }
+  }
+  &__lang{
+    position: relative;
+    float: left;
+    width: calc(100% - (25px + 15px));
+    padding-left: 22px;
+    @include box-sizing(border-box);
+    &--trigger{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 25px;
+      cursor: pointer;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        top: 8px;
+        right: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid #003360;
+      }
+    }
+    &--title{
+      position: relative;
+      float: left;
+      width: 100%;
+      .icon{
+        position: relative;
+        float: left;
+        width: 15px;
+        height: 14px;
+        overflow: hidden;
+        border-radius: 2px;
+        margin-top: 2px;
+        @include breakpoint(max-width 660px){
+          width: 27px;
+          height: 21px;
+        }
+        img, svg{
+          size: 100%;
+          object-fit: contain;
+        }
+      }
+      .lang{
+        position: relative;
+        float: left;
+        width: calc(100% - 15px);
+        width: -moz-calc(100% - 15px);
+        color: #03284c;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        line-height: 22px;
+        padding-left: 10px;
+        @include box-sizing(border-box);
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
+      }
+    }
+    &--list{
+      display: none;
+      position: absolute;
+      width: 100%;
+      box-shadow: 0 0 6px rgba(0, 122, 255, 0.08);
+      padding-left: 14px;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 10px;
+      @include box-sizing(border-box);
+      margin: 0;
+      left: 8px;
+      top: 52px;
+      list-style: none;
+      z-index: 1;
+      background-color: #fff;
+      li{
+        position: relative;
+        float: left;
+        width: 100%;
+        cursor: pointer;
+        @include breakpoint(max-width 660px){
+          margin-bottom: 10px;
+        }
+        .icon{
+          position: relative;
+          float: left;
+          width: 15px;
+          height: 14px;
+          overflow: hidden;
+          border-radius: 2px;
+          margin-top: 2px;
+          @include breakpoint(max-width 660px){
+            width: 27px;
+            height: 21px;
+          }
+          img, svg{
+            size: 100%;
+            object-fit: contain;
+          }
+        }
+        .lang{
+          position: relative;
+          float: left;
+          width: calc(100% - 15px);
+          width: -moz-calc(100% - 15px);
+          color: #03284c;
+          font-size: 12px;
+          letter-spacing: 0.6px;
+          line-height: 22px;
+          padding-left: 10px;
+          @include box-sizing(border-box);
+          @include breakpoint(max-width 660px){
+            display: none;
+          }
+        }
+      }
     }
   }
 }

@@ -43,6 +43,30 @@ $(document).ready(function () {
     });
     /*close*/
 
+    /*switch language*/
+    $(document).on('click', '.header__lang--trigger', function (event) {
+        var list = $(this).next('.header__lang--list');
+        list.slideToggle('500');
+    });
+    $(document).on('click', '.header__lang--list li', function () {
+        var listIcon = $(this).find('.icon').html(),
+            listText = $(this).find('.lang').text(),
+            listAttr = $(this).attr('data-id'),
+            list = $(this).parent();
+
+        list.slideUp('500');
+        $('.header__lang--title').attr('data-id', listAttr).find('.icon').html(listIcon);
+        $('.header__lang--title').find('.lang').text(listText);
+    });
+    $(document).mouseup(function (event) {
+        var block = $('.header__toolbar');
+        if (!block.is(event.target)
+            && block.has(event.target).length === 0) {
+            $('.header__lang--list').slideUp('500');
+        }
+    });
+    /*close*/
+
     /*gallery slider*/
     $(window).on('load resize', function () {
         gallerySlider();
