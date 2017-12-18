@@ -1,0 +1,91 @@
+.about{
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 80px;
+  &__title{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 57px;
+    margin-bottom: 50px;
+    text-align: left;
+    //text-transform: uppercase;
+    color: #03284c;
+    font-size: 28px;
+    font-family: $ProximaNovaBold;
+    &:after{
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -19px;
+      width: 30px;
+      height: 1px;
+      background-color: rgba(0,54,95,0.26);
+    }
+  }
+  &__wrapper{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: 100%;
+    &--element{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      position: relative;
+      float: left;
+      width: calc(50% - 5px);
+      border-radius: 5px;
+      //border: 1px solid #00365f;
+      box-shadow: 0 1px 11px rgba(52,73,94,0.4);
+      background-color: #ffffff;
+      margin-bottom: 10px;
+      padding-top: 41px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
+      > h3{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 42px;
+        margin-bottom: 33px;
+        color: #03284c;
+        font-family: "PT Serif", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+      }
+      > p{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #00335f;
+        font-size: 16px;
+      }
+    }
+    &--icon{
+      display: block;
+      position: relative;
+      float: left;
+      //width: 94px;
+      height: 72px;
+      //overflow: hidden;
+      //img, svg {
+      //  size: 100%;
+      //  object-fit: contain;
+      //}
+    }
+  }
+}
