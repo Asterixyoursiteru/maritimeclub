@@ -1,6 +1,7 @@
 $ProximaNovaRegular: 'ProximaNova Regular';
 $ProximaNovaSemibold: 'ProximaNova Semibold';
 $ProximaNovaBold: 'ProximaNova Bold';
+$PTSerifRegular: 'PTSerif Regular';
 @font-face {
   font-family: 'ProximaNova Regular';
   src: url('../fonts/ProximaNova/ProximaNovaRegular.eot') format('embedded-opentype'),
@@ -26,5 +27,14 @@ $ProximaNovaBold: 'ProximaNova Bold';
   url('../fonts/ProximaNova/ProximaNovaBold.woff') format('woff'),
   url('../fonts/ProximaNova/ProximaNovaBold.ttf') format('truetype'),
   url('../fonts/ProximaNova/ProximaNovaBold.svg') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'PTSerif Regular';
+  src: url('../fonts/PTSerif/PTSerifRegular.eot') format('embedded-opentype'),
+  url('../fonts/PTSerif/PTSerifRegular.woff2') format('woff2'),
+  url('../fonts/PTSerif/PTSerifRegular.woff') format('woff'),
+  url('../fonts/PTSerif/PTSerifRegular.ttf') format('truetype'),
+  url('../fonts/PTSerif/PTSerifRegular.svg') format('svg');
   font-weight: normal;
 }
