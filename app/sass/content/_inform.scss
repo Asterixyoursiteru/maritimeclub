@@ -33,6 +33,9 @@
       height: calc(100% - (62px + 41px + 110px + 28px));
       height: -moz-calc(100% - (62px + 41px + 110px + 28px));
       background-color: #fff;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
     }
   }
   &__element{
@@ -45,6 +48,9 @@
     float: left;
     width: 50%;
     z-index: 1;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+    }
     &--date{
       -webkit-order: 1;
       order: 1;
@@ -76,15 +82,27 @@
   &__element.first{
     margin-left: calc(50% - 53px);
     margin-bottom: 41px;
+    @include breakpoint(max-width 660px){
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
   }
   &__element.left{
     margin-right: 50%;
     padding-right: 54px;
     margin-bottom: 20px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      margin-right: 0;
+      padding-right: 0;
+    }
     .inform__element--date{
       -webkit-order: 2;
       order: 2;
+      @include breakpoint(max-width 660px){
+        -webkit-order:1;
+        order: 1;
+      }
       &:after{
         display: block;
         position: absolute;
@@ -98,18 +116,31 @@
         -webkit-background-size: contain;
         background-size: contain;
         z-index: 1;
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
     }
     .inform__element--descr{
       -webkit-order: 1;
       order: 1;
       text-align: right;
+      @include breakpoint(max-width 660px){
+        -webkit-order:1;
+        order: 1;
+        text-align: left;
+      }
     }
   }
   &__element.right{
     margin-left: 50%;
     margin-bottom: 20px;
     padding-left: 54px;
+    @include breakpoint(max-width 660px){
+      margin-left: 0;
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
     @include box-sizing(border-box);
     .inform__element--date{
       -webkit-order: 1;
@@ -127,6 +158,9 @@
         -webkit-background-size: contain;
         background-size: contain;
         z-index: 1;
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
     }
     .inform__element--descr{
@@ -144,21 +178,39 @@
     width: 100%;
     margin-top: 43px;
     margin-bottom: 73px;
+    @include breakpoint(max-width 660px){
+      @include flex-direction(row);
+      @include justify-content(space-between);
+      @include align-items(center);
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
     .inform__element--date{
       -webkit-order: 1;
       order: 1;
       margin-bottom: 26px;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 0;
+      }
     }
     .inform__element--descr{
       -webkit-order: 2;
       order: 2;
       text-align: center;
+      @include breakpoint(max-width 660px){
+        text-align: left;
+      }
     }
   }
   &__box{
     position: relative;
     float: left;
     width: 100%;
+    margin-bottom: 89px;
+    @include breakpoint(max-width 660px){
+      margin-bottom: 20px;
+    }
     > h3{
       position: relative;
       float: left;
@@ -169,6 +221,10 @@
       color: #ffffff;
       font-family: $ProximaNovaBold;
       font-size: 28px;
+      @include breakpoint(max-width 660px){
+        margin-top: 57px;
+        margin-bottom: 50px;
+      }
       &:after{
         display: block;
         position: absolute;
@@ -187,6 +243,9 @@
       width: -moz-calc(100% - 171px);
       padding-right: 18px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
       > p{
         position: relative;
         float: left;
@@ -196,13 +255,35 @@
         color: #ffffff;
         font-family: $PTSerifRegular;
         font-size: 18px;
-        line-height: 25px;
+        line-height: 32px;
+        @include breakpoint(max-width 660px){
+          line-height: 26px;
+        }
+      }
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: url('../img/icons/info-separator.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        @include breakpoint(max-width 660px){
+         display: none;
+        }
       }
     }
     &--values{
       position: relative;
       float: left;
       width: 171px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
     &--item{
       @include display-flex(flex);
@@ -212,15 +293,33 @@
       position: relative;
       float: left;
       width: 100%;
+      margin-bottom: 47px;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 20px;
+      }
       .value{
         display: block;
         position: relative;
         float: left;
+        width: 100%;
+        margin-bottom: 5px;
         text-align: center;
         color: #ffffff;
-        font-family: "PT Serif";
+        font-family: $PTSerifBold;
         font-size: 55px;
-        font-weight: 700;
+        line-height: 53px;
+      }
+      .descr{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        color: #ffffff;
+        font-family: $ProximaNovaSemibold;
+        font-size: 10px;
+        text-transform: uppercase;
       }
     }
   }
