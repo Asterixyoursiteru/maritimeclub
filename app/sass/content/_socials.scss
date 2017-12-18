@@ -1,8 +1,9 @@
 .socials{
-  position: fixed;
+  display: block;
+  position: absolute;
   width: 24px;
   height: 130px;
-  top: calc(50% - (130px/2));
+  top: 15%;
   left: 76px;
   z-index: 1;
   @include breakpoint(max-width 1023px){
