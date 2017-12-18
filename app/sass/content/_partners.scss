@@ -1,9 +1,9 @@
-.partners{
+.partners {
   position: relative;
   float: left;
   width: 100%;
   background-color: #fff;
-  &__wrapper{
+  &__wrapper {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
@@ -11,7 +11,7 @@
     position: relative;
     float: left;
     width: 100%;
-    &--item{
+    &--item {
       display: block;
       position: relative;
       float: left;
@@ -20,17 +20,22 @@
       overflow: hidden;
       margin-top: 86px;
       margin-bottom: 86px;
-      img, svg{
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      img, svg {
         size: 100%;
         object-fit: contain;
       }
     }
   }
-  &__form-box{
+  &__form-box {
     position: relative;
     float: left;
     width: 100%;
-    box-shadow: 0 1px 11px rgba(52,73,94,0.4);
+    box-shadow: 0 1px 11px rgba(52, 73, 94, 0.4);
     background-color: #ffffff;
     padding-top: 44px;
     padding-left: 46px;
@@ -38,12 +43,19 @@
     padding-bottom: 48px;
     @include box-sizing(border-box);
     margin-bottom: 101px;
-    &--title{
+    @include breakpoint(max-width 660px) {
+      padding-top: 24px;
+      padding-left: 26px;
+      padding-right: 26px;
+      padding-bottom: 28px;
+      margin-bottom: 20px;
+    }
+    &--title {
       position: relative;
       float: left;
       width: 100%;
       margin-bottom: 22px;
-      > h3{
+      > h3 {
         width: 100%;
         position: relative;
         float: left;
@@ -54,7 +66,7 @@
         font-family: $ProximaNovaBold;
         font-size: 28px;
       }
-      > p{
+      > p {
         position: relative;
         float: left;
         width: 100%;
@@ -65,21 +77,28 @@
         font-size: 22px;
       }
     }
-    &--fields{
-      display: none;  
+    &--fields {
+      display: none;
       position: relative;
       float: left;
       width: 100%;
       margin-bottom: 64px;
     }
-    &--line{
+    &--line {
       position: relative;
       float: left;
-      width: calc(50% - (48px/2));
-      &:nth-of-type(2){
-        float: right;
+      width: calc(50% - (48px / 2));
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        margin-bottom: 15px;
       }
-      > label{
+      &:nth-of-type(2) {
+        float: right;
+        @include breakpoint(max-width 660px) {
+          float: left;
+        }
+      }
+      > label {
         position: relative;
         float: left;
         width: 100%;
@@ -90,7 +109,7 @@
         line-height: 18px;
       }
     }
-    &--field{
+    &--field {
       position: relative;
       float: left;
       width: 100%;
@@ -104,12 +123,12 @@
       font-family: $ProximaNovaBold;
       font-size: 18px;
     }
-    &--submit{
+    &--submit {
       position: relative;
       float: left;
       width: 280px;
-      margin-left: calc(50% - (280px/2));
-      margin-left: -moz-calc(50% - (280px/2));
+      margin-left: calc(50% - (280px / 2));
+      margin-left: -moz-calc(50% - (280px / 2));
       padding: 20px 0;
       @include box-sizing(border-box);
       background-color: #00365f;
@@ -120,10 +139,14 @@
       font-size: 24px;
       cursor: pointer;
       @include transition(0.4s);
-      &:hover{
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        margin-left: 0;
+      }
+      &:hover {
         background-color: transparent;
         border: 1px solid #00365f;
-        color:#00365f;
+        color: #00365f;
         @include transition(0.4s);
       }
     }
