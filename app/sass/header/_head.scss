@@ -32,13 +32,13 @@
     top: 0;
     right: -162px;
     @include breakpoint(max-width 1024px){
-      top: -64px;
-      right: 0;
+      top: 0;
+      right: 12px;
     }
     @include breakpoint(max-width 660px){
       position: absolute;
-      top: -70px;
-      right: 0;
+      top: 0;
+      right: 12px;
       width: 111px;
     }
     &--user{
