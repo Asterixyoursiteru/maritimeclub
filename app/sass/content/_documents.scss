@@ -17,6 +17,9 @@
     position: relative;
     float: left;
     width: 100%;
+    @include breakpoint(max-width 660px){
+      @include flex-direction(column);
+    }
     &:first-of-type{
       .documents__row--item.strong:nth-of-type(1):after {
         display: block;
@@ -27,6 +30,9 @@
         width: 5px;
         height: 100%;
         background-color: #00365f;
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
       .documents__row--item.strong:nth-of-type(5):after {
         display: block;
@@ -37,6 +43,9 @@
         width: 5px;
         height: 100%;
         background-color: #00365f;
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
     }
     &:nth-of-type(2){
@@ -49,6 +58,9 @@
         width: 5px;
         height: 15px;
         background-color: #00365f;
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
     }
     &:nth-of-type(2){
@@ -64,6 +76,9 @@
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
       .documents__row--item:nth-of-type(4):after, .documents__row--item:nth-of-type(5):after {
         display: block;
@@ -77,6 +92,9 @@
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
       .documents__row--item:nth-of-type(1):before {
         display: block;
@@ -88,6 +106,12 @@
         width: -moz-calc(100% + 16px);
         height: 5px;
         background-color: #00365f;
+        @include breakpoint(max-width 998px){
+          left: 66px;
+        }
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
       .documents__row--item:nth-of-type(5):before {
         display: block;
@@ -99,6 +123,12 @@
         width: -moz-calc(100% + 16px);
         height: 5px;
         background-color: #00365f;
+        @include breakpoint(max-width 998px){
+          right:66px;
+        }
+        @include breakpoint(max-width 660px){
+          display: none;
+        }
       }
     }
     &:first-of-type:after {
@@ -113,7 +143,9 @@
       background-repeat: no-repeat;
       -webkit-background-size: cover;
       background-size: cover;
-
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
     }
     &--item {
       @include display-flex(flex);
@@ -132,6 +164,10 @@
       border: 1px solid #00365f;
       border-radius: 30px;
       z-index: 1;
+      @include breakpoint(max-width 660px){
+        width: calc(100% - 10px);
+        width: -moz-calc(100% - 10px);
+      }
       > h3 {
         position: relative;
         float: left;
@@ -143,6 +179,9 @@
         font-family: $ProximaNovaSemibold;
         font-size: 18px;
         text-transform: uppercase;
+        @include breakpoint(max-width 998px){
+          font-size: 14px;
+        }
       }
       > p {
         position: relative;
@@ -153,13 +192,19 @@
         text-align: center;
         color: #00365f;
         font-size: 16px;
+        @include breakpoint(max-width 998px){
+          font-size: 12px;
+        }
       }
     }
     &--item.center {
       border: transparent;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
     }
     &--item.strong {
-      box-shadow: 0px 0px 0px 2px #00365f inset;
+      box-shadow: 0 0 0 2px #00365f inset;
     }
   }
 
