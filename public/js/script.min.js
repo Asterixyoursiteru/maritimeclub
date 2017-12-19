@@ -69,8 +69,9 @@ $(document).ready(function () {
 
     /*top-banner countdown*/
     if (('#countdown').length > 0) {
-        // var date = $('#countdown').attr('data-date');
-        $('#countdown').countdown("2018/06/05", function(event) {
+        var date = $('#top-banner-date').text();
+        // console.log( date );
+        $('#countdown').countdown(date, function(event) {
             // $(this).addClass('top-banner__counter');
             $('.timeRefDays').html(event.strftime('%D <span class="days">дней</span>'));
             $('.timeRefHours').html(event.strftime('%H <span class="days">часов</span>'));

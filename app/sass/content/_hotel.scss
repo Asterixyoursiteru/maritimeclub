@@ -3,4 +3,97 @@
   float: left;
   width: 100%;
   background-color: #fff;
+  &__wrapper{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 80px;
+    &--element{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ececec;
+    }
+    &--photo{
+      position: relative;
+      float: left;
+      width: 306px;
+      height: 180px;
+      overflow: hidden;
+      img, svg{
+        size: 100%;
+        object-fit: cover;
+      }
+    }
+    &--about{
+      position: relative;
+      float: left;
+      width: calc(100% - 306px);
+      width: -moz-calc(100% - 306px);
+      padding-left: 45px;
+      @include box-sizing(border-box);
+      > h3{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 17px;
+        margin-bottom: 54px;
+        color: #00365f;
+        font-size: 24px;
+      }
+      > p{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 40px;
+        color: #a2a2a2;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &--val{
+      @include display-flex(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include justify-content(flex-start);
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--item{
+      position: relative;
+      float: left;
+      margin-right: 40px;
+      color: #00365f;
+      font-size: 12px;
+      text-transform: uppercase;
+      > span{
+        color: #9a9a9a;
+        margin-left: 4px;
+      }
+    }
+    &--box{
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 60px;
+      padding-bottom: 30px;
+      @include box-sizing(border-box);
+      border-bottom: 1px solid #ececec;
+      > p{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: #00365f;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
 }
