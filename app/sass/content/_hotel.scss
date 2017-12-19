@@ -22,6 +22,10 @@
       width: 306px;
       height: 180px;
       overflow: hidden;
+      @include breakpoint(max-width 307px){
+        width: 100%;
+        margin-bottom: 10px;
+      }
       img, svg{
         size: 100%;
         object-fit: cover;
@@ -34,6 +38,14 @@
       width: -moz-calc(100% - 306px);
       padding-left: 45px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        padding-left: 10px;
+      }
+      @include breakpoint(max-width 307px){
+        width: 100%;
+        margin-bottom: 10px;
+      }
       > h3{
         position: relative;
         float: left;
@@ -42,6 +54,10 @@
         margin-bottom: 54px;
         color: #00365f;
         font-size: 24px;
+        @include breakpoint(max-width 660px){
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
       }
       > p{
         position: relative;
@@ -52,6 +68,9 @@
         color: #a2a2a2;
         font-size: 14px;
         line-height: 20px;
+        @include breakpoint(max-width 660px){
+          margin-bottom: 10px;
+        }
       }
     }
     &--val{
@@ -62,6 +81,9 @@
       position: relative;
       float: left;
       width: 100%;
+      @include breakpoint(max-width 660px){
+        @include flex-direction(column);
+      }
     }
     &--item{
       position: relative;
