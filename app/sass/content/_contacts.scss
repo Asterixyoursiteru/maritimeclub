@@ -1,0 +1,25 @@
+.contacts{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: calc(100vh - 69px);
+  height: -moz-calc(100vh - 69px);
+  background-image: url('../img/contacts-bg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .page-title{
+    color: #fff;
+    &:after{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 1px;
+      left: calc(50% - (30px/2));
+      left: -moz-calc(50% - (30px/2));
+      bottom: -22px;
+      background-color: rgba(255,255,255,0.26);
+    }
+  }
+}
