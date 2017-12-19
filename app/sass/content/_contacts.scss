@@ -1,4 +1,4 @@
-.contacts{
+.contacts {
   position: relative;
   float: left;
   width: 100%;
@@ -8,18 +8,84 @@
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  .page-title{
+  .page-title {
     color: #fff;
-    &:after{
+    &:after {
       display: block;
       position: absolute;
       content: '';
       width: 30px;
       height: 1px;
-      left: calc(50% - (30px/2));
-      left: -moz-calc(50% - (30px/2));
+      left: calc(50% - (30px / 2));
+      left: -moz-calc(50% - (30px / 2));
       bottom: -22px;
-      background-color: rgba(255,255,255,0.26);
+      background-color: rgba(255, 255, 255, 0.26);
+    }
+  }
+  &__wrapper {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(column);
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    &--link{
+      display: inline-block;
+      position: relative;
+      margin-top: 98px;
+      margin-bottom: 38px;
+      @include breakpoint(max-width 660px){
+        margin-top: 0;
+      }
+      > span:first-of-type{
+        color: white;
+        font-family: $PTSerifRegular;
+        font-size: 22px;
+        margin-right: 5px;
+      }
+      > span:nth-of-type(2){
+        color: white;
+        font-family: $PTSerifBold;
+        font-size: 22px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    &--mail{
+      display: inline-block;
+      position: relative;
+      margin-bottom: 0;
+      > span:first-of-type{
+        color: white;
+        font-family: $PTSerifRegular;
+        font-size: 22px;
+        margin-right: 5px;
+      }
+      > span:nth-of-type(2){
+        color: white;
+        font-family: $PTSerifBold;
+        font-size: 22px;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    &--mail:last-of-type{
+      display: inline-block;
+      position: relative;
+      margin-bottom: 0;
+      > span:first-of-type{
+        color: white;
+        font-family: $PTSerifBold;
+        font-size: 22px;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
     }
   }
 }

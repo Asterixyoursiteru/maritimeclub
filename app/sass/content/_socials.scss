@@ -36,5 +36,25 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+    &.facebook-b{
+      background-image: url('../img/icons/facebook-b.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.twitter-b{
+      background-image: url('../img/icons/twitter-b.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.vk-b{
+      background-image: url('../img/icons/vk-b.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.instagram-b{
+      background-image: url('../img/icons/instagram-b.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 }
