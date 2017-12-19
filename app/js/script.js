@@ -67,6 +67,19 @@ $(document).ready(function () {
     });
     /*close*/
 
+    /*top-banner countdown*/
+    if (('#countdown').length > 0) {
+        // var date = $('#countdown').attr('data-date');
+        $('#countdown').countdown("2018/06/05", function(event) {
+            // $(this).addClass('top-banner__counter');
+            $('.timeRefDays').html(event.strftime('%D <span class="days">дней</span>'));
+            $('.timeRefHours').html(event.strftime('%H <span class="days">часов</span>'));
+            $('.timeRefMinutes').html(event.strftime('%M <span class="days">минут</span>'));
+            $('.timeRefSeconds').html(event.strftime('%S <span class="days">секунд</span>'));
+        });
+    }
+    /*close*/
+
     /*gallery slider*/
     $(window).on('load resize', function () {
         gallerySlider();
@@ -79,7 +92,7 @@ $(document).ready(function () {
         event.preventDefault();
         var box = $(this).closest('.partners__form-box--form').find('.partners__form-box--title'),
             fields = $(this).closest('.partners__form-box--form').find('.partners__form-box--fields');
-        $(this).removeClass('js-show-partners-form');        
+        $(this).removeClass('js-show-partners-form');
         box.slideUp('400');
         fields.slideDown('400');
         return false;
@@ -107,6 +120,29 @@ $(document).ready(function () {
     /*close*/
 
 });
+
+//preloader
+;(function ($) {
+
+    var preloader = {
+        open: function () {
+            $('body').addClass('hidden-overflow');
+            $('.js-open').fadeIn('fast');
+        },
+        close: function () {
+            $('body').removeClass('hidden-overflow');
+            $('.js-open').fadeOut('fast');
+        }
+    };
+
+    preloader.open();
+
+    $(window).on('load', function () {
+        setTimeout(function () {
+            preloader.close();
+        }, 400);
+    });
+})(jQuery);
 
 /*gallery slider*/
 function gallerySlider() {

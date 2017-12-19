@@ -3,7 +3,8 @@
   position: absolute;
   width: 24px;
   height: 130px;
-  top: 15%;
+  top: calc(50% - (130px/2));
+  top: -moz-calc(50% - (130px/2));
   left: 76px;
   z-index: 1;
   @include breakpoint(max-width 1023px){

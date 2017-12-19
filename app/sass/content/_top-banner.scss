@@ -29,4 +29,165 @@
     font-family: $ProximaNovaBold;
     font-size: 12px;
   }
+  &__date{
+    display: none;
+  }
+  &__counter{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    //float: left;
+    width: 470px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    > li{
+      position: relative;
+      float: left;
+      width: calc(25% - 7px);
+      width: -moz-calc(25% - 7px);
+      border-radius: 2px;
+      background-color: #fff;
+      padding-top: 27px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 27px;
+      @include box-sizing(border-box);
+      > p{
+        position: relative;
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 31px;
+        color: #00365f;
+        font-family: $PTSerifBold;
+        font-size: 42px;
+        > span{
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: -31px;
+          color: #03284c;
+          font-family: $ProximaNovaRegular;
+          font-size: 12px;
+          &:before{
+            display: block;
+            position: absolute;
+            content: '';
+            top: -10px;
+            left: calc(50% - (30px/2));
+            left: -moz-calc(50% - (30px/2));
+            width: 30px;
+            height: 1px;
+            background-color: rgba(0,54,95,0.26);
+          }
+        }
+      }
+    }
+  }
+  &__links{
+    @include display-flex(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: 101px;
+    &--notice{
+      position: relative;
+      float: left;
+      width: 153px;
+      margin: 0 6px;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      @include box-sizing(border-box);
+      background-color: white;
+      border-radius: 27px;
+      text-align: center;
+      border: 1px solid transparent;
+      color: #00365f;
+      font-family: $ProximaNovaSemibold;
+      font-size: 12px;
+      text-transform: uppercase;
+      @include transition(0.4s);
+      &:hover{
+        border: 1px solid #fff;
+        color: #ffffff;
+        background-color: #00365f;
+        @include transition(0.4s);
+      }
+    }
+    &--callback{
+      position: relative;
+      float: left;
+      width: 52px;
+      height: 52px;
+      margin: 0 6px;
+      background-color: white;
+      border-radius: 50%;
+      background-image: url('../img/icons/sond@2x.svg');
+      background-repeat: no-repeat;
+      -webkit-background-size: 22px 22px;
+      background-size: 22px 22px;
+      background-position: 16px 14px;
+      border: 1px solid transparent;
+    }
+  }
+  &__bottom {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    &--box {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: -33px;
+      margin-bottom: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      @include box-sizing(border-box);
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 1px rgba(0, 54, 95, 0.36);
+      > p{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 43px;
+        margin-bottom: 0;
+        color: #00365F;
+        font-family: $PTSerifRegular;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    &--title {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #00365f;
+      font-family: $ProximaNovaBold;
+      font-size: 28px;
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: -21px;
+        left: 0;
+        width: 30px;
+        height: 1px;
+        background-color: rgba(0,54,95,0.26);
+      }
+    }
+  }
 }
