@@ -81,6 +81,22 @@ $(document).ready(function () {
     }
     /*close*/
 
+    /*hotel slider*/
+    if($('.hotel__wrapper--slider').length > 0){
+        var hotelSlider = $('.hotel__wrapper--slider');
+        hotelSlider.slick({
+            dots: false,
+            arrows: true,
+            // slidesToShow: 1,
+            // slidesToScroll: 1,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+    }
+    /*close*/
+
     /*gallery slider*/
     $(window).on('load resize', function () {
         gallerySlider();

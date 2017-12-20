@@ -16,11 +16,68 @@
       padding-bottom: 30px;
       border-bottom: 1px solid #ececec;
     }
-    &--photo{
+    &--slider{
       position: relative;
       float: left;
       width: 306px;
       height: 180px;
+      overflow: hidden;
+      &:hover{
+        .slick-prev{
+          left: 0;
+          @include transition(0.4s);
+        }
+        .slick-next{
+          right: 0;
+          @include transition(0.4s);
+        }
+      }
+      .slick-prev {
+        left: -40px;
+        width: 10%;
+        height: 100%;
+        z-index: 1;
+        @include transition(0.4s);
+        &:before{
+          display: block;
+          position: absolute;
+          content: '';
+          width: 36px;
+          height: 43px;
+          top: 67px;
+          background-image: url('../img/icons/prev.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 37px 40px;
+          background-size: 37px 40px;
+          color: transparent;
+        }
+      }
+      .slick-next {
+        right: -40px;
+        width: 10%;
+        height: 100%;
+        z-index: 1;
+        @include transition(0.4s);
+        &:before{
+          display: block;
+          position: absolute;
+          content: '';
+          width: 36px;
+          height: 43px;
+          top: 67px;
+          background-image: url('../img/icons/next.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: 37px 40px;
+          background-size: 37px 40px;
+          color: transparent;
+        }
+      }
+    }
+    &--photo{
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
       @include breakpoint(max-width 307px){
         width: 100%;
