@@ -20,8 +20,8 @@
     @include breakpoint(max-width 660px){
       @include flex-direction(column);
     }
-    &:first-of-type{
-      .documents__row--item.strong:nth-of-type(1):after {
+    &.first{
+      .documents__row--item.strong:first-of-type:after{
         display: block;
         position: absolute;
         content: '';
@@ -34,7 +34,7 @@
           display: none;
         }
       }
-      .documents__row--item.strong:nth-of-type(5):after {
+      .documents__row--item.strong:last-of-type:after {
         display: block;
         position: absolute;
         content: '';
@@ -48,8 +48,8 @@
         }
       }
     }
-    &:nth-of-type(2){
-      .documents__row--item:nth-of-type(2):before, .documents__row--item:nth-of-type(4):before{
+    &.second{
+      .documents__row--item.second:before, .documents__row--item.fourth:before{
         display: block;
         position: absolute;
         content: '';
@@ -63,8 +63,8 @@
         }
       }
     }
-    &:nth-of-type(2){
-      .documents__row--item:nth-of-type(1):after, .documents__row--item:nth-of-type(2):after {
+    &.second{
+      .documents__row--item.first:after, .documents__row--item.second:after {
         display: block;
         position: absolute;
         content: '';
@@ -80,7 +80,7 @@
           display: none;
         }
       }
-      .documents__row--item:nth-of-type(4):after, .documents__row--item:nth-of-type(5):after {
+      .documents__row--item.fourth:after, .documents__row--item.fifth:after {
         display: block;
         position: absolute;
         content: '';
@@ -96,7 +96,7 @@
           display: none;
         }
       }
-      .documents__row--item:nth-of-type(1):before {
+      .documents__row--item.first:before {
         display: block;
         position: absolute;
         content: '';
@@ -113,7 +113,7 @@
           display: none;
         }
       }
-      .documents__row--item:nth-of-type(5):before {
+      .documents__row--item.fifth:before {
         display: block;
         position: absolute;
         content: '';
@@ -131,7 +131,7 @@
         }
       }
     }
-    &:first-of-type:after {
+    &.first:after {
       display: block;
       position: absolute;
       content: '';
