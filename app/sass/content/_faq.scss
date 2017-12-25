@@ -39,7 +39,7 @@
       border: 1px solid #ffffff;
       border-radius: 5px;
       margin-bottom: 1px;
-      padding-top: 34px;
+      padding-top: 20px;
       padding-left: 32px;
       padding-right: 32px;
       @include box-sizing(border-box);
@@ -60,10 +60,10 @@
       float: left;
       width: calc(100% - 21px);
       width: -moz-calc(100% - 21px);
-      color: #fff;
-      font-size: 28px;
       font-family: $ProximaNovaBold;
-      margin-bottom: 26px;
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 16px;
       &:hover, &:focus{
         color: #fff;
       }
@@ -82,7 +82,7 @@
       float: right;
       width: 21px;
       height: 21px;
-      margin-top: 9px;
+      margin-top: 0;
       overflow: hidden;
       background-image: url('../img/icons/plus.svg');
       background-repeat: no-repeat;

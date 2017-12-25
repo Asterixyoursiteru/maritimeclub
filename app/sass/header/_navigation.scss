@@ -5,6 +5,9 @@
     float: left;
     width: calc(100% - (54px + 23px));
     width: -moz-calc(100% - (54px + 23px));
+    @include breakpoint(max-width 1300px){
+      width: 100%;
+    }
     @include breakpoint(max-width 1024px){
       width: 100%;
     }
@@ -65,7 +68,7 @@
       }
     }
   }
-  &__nav{
+  &__nav, .header__nav ul{
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
@@ -102,6 +105,9 @@
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.6px;
+        @include breakpoint(max-width 1300px){
+          font-size: 10px;
+        }
         @include breakpoint(max-width 1024px){
           font-size: 10px;
         }
@@ -125,11 +131,34 @@
             width: -moz-calc(100% + 30px);
             height: 3px;
             left: -15px;
-            bottom: -1px;
+            bottom: -2px;
             background-color: #00365f;
             @include breakpoint(max-width 660px){
               background-color: #fff;
             }
+          }
+        }
+      }
+    }
+    li.current_page_item{
+      a{
+        color: #03274c;
+        font-family: $ProximaNovaBold;
+        @include breakpoint(max-width 660px){
+          color: #fff;
+        }
+        &:after{
+          display: block;
+          position: absolute;
+          content: '';
+          width: calc(100% + 30px);
+          width: -moz-calc(100% + 30px);
+          height: 3px;
+          left: -15px;
+          bottom: -2px;
+          background-color: #00365f;
+          @include breakpoint(max-width 660px){
+            background-color: #fff;
           }
         }
       }
