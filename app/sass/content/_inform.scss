@@ -26,12 +26,12 @@
       display: block;
       position: absolute;
       content: '';
-      top: 60px;
+      top: 78px;
       left: calc(50% - 1px);
       left: -moz-calc(50% - 1px);
       width: 2px;
-      height: calc(100% - (62px + 41px + 110px + 28px));
-      height: -moz-calc(100% - (62px + 41px + 110px + 28px));
+      height: calc(100% - 259px);
+      height: -moz-calc(100% - 259px);
       background-color: #fff;
       @include breakpoint(max-width 660px){
         display: none;
@@ -51,9 +51,9 @@
     @include breakpoint(max-width 660px){
       width: 100%;
     }
-    p{
-      display: none;
-    }
+    //p{
+    //  display: none;
+    //}
     &--date{
       -webkit-order: 1;
       order: 1;
