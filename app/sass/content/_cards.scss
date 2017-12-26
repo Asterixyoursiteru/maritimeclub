@@ -51,6 +51,11 @@
     float: left;
     width: 100%;
     margin-bottom: 46px;
+    @include breakpoint(max-width 660px){
+      display: block;
+      position: relative;
+      float: left;
+    }
     &--item{
       position: relative;
       float: left;
@@ -62,7 +67,10 @@
       border-radius: 4px;
       box-shadow: 0 1px 4px #c5c5c5;
       @include breakpoint(max-width 992px){
-        height: 600px;
+         height: 600px;
+       }
+      @include breakpoint(max-width 660px){
+        width: 100%;
       }
     }
     &--icon{

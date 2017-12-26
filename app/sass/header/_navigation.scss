@@ -26,6 +26,7 @@
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
     z-index: 15;
+    cursor: pointer;
     @include breakpoint(max-width 660px) {
       display: block;
     }
