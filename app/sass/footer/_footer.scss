@@ -166,5 +166,54 @@
       text-transform: uppercase;
       letter-spacing: 0.55px;
     }
+    a, a:hover{
+      display: block;
+      position: absolute;
+      width: 200px;
+      right: 10%;
+      margin-top: 17px;
+      margin-bottom: 24px;
+      color: #ffffff;
+      font-family: $ProximaNovaSemibold;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+      @include breakpoint(max-width 990px){
+        position: relative;
+        float: left;
+        width: 200px;
+        right: inherit;
+        margin-left: calc(50% - (200px/2));
+        margin-left: -moz-calc(50% - (200px/2));
+      }
+      @include breakpoint(max-width 660px){
+        position: relative;
+        float: left;
+        width: 100%;
+        right: inherit;
+        margin-top: 17px;
+        margin-left: 0;
+        text-align: center;
+
+      }
+      span{
+        position: relative;
+        float: left;
+        width: 50%;
+        &:first-of-type{
+          line-height: 33px;
+        }
+        &:nth-of-type(2){
+          position: relative;
+          float: left;
+          height: 25px;
+          overflow: hidden;
+          img, svg{
+            size: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
   }
 }
