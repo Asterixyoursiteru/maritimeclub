@@ -80,7 +80,7 @@
     padding: 0;
     list-style: none;
     @include breakpoint(max-width 660px) {
-      display: none;
+      //display: none;
       position: absolute;
       z-index: 2;
       background-color: rgba(3,39,76,0.95);
@@ -107,6 +107,9 @@
         letter-spacing: 0.6px;
         @include breakpoint(max-width 1300px){
           font-size: 10px;
+          width: calc(100% - (5px*2));
+          width: -moz-calc(100% - (5px*2));
+          margin: 0 5px;
         }
         @include breakpoint(max-width 1024px){
           font-size: 10px;
@@ -162,6 +165,14 @@
           }
         }
       }
+    }
+  }
+  &__nav{
+    @include breakpoint(max-width 660px) {
+      display: none;
+      //position: absolute;
+      //z-index: 2;
+      //background-color: rgba(3,39,76,0.95);
     }
   }
 }

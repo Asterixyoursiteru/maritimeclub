@@ -41,6 +41,21 @@ $(document).ready(function () {
             $('.header__form-box').slideUp('500');
         }
     });
+    $(document).on('click', '.header__toolbar--user', function (event) {
+        event.preventDefault();
+        var formBox = $(this).next('.header__form-box');
+        $(this).toggleClass('js-form-active');
+        formBox.slideToggle('slow');
+        return false;
+    });
+    $(document).mouseup(function (event) {
+        var block = $('.header__toolbar');
+        if (!block.is(event.target)
+            && block.has(event.target).length === 0) {
+            $('.header__toolbar--user').removeClass('js-form-active');
+            $('.header__form-box').slideUp('500');
+        }
+    });
     /*close*/
 
     /*switch language*/

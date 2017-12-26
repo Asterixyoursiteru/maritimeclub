@@ -152,6 +152,9 @@
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
         border-top: 7px solid #003360;
+        @include breakpoint(max-width 660px){
+          display: none;  
+        }
       }
     }
     &--title{
@@ -265,6 +268,12 @@
       list-style: none;
       z-index: 1;
       background-color: #fff;
+      @include breakpoint(max-width 660px){
+        width: 123px;
+        margin: 0;
+        left: -53px;
+        top: 52px;
+      }
       li{
         position: relative;
         float: left;
@@ -277,14 +286,22 @@
         padding-left: 8px;
         @include box-sizing(border-box);
         @include breakpoint(max-width 660px){
-          color: transparent;
+          line-height: 18px;
           margin-bottom: 10px;
-          content: ""!important;
-          font-size: 0;
+          //content: ""!important;
+          //font-size: 0;
         }
         @include breakpoint(max-width 660px){
           margin-bottom: 10px;
         }
+        //a{
+        //  @include breakpoint(max-width 660px){
+        //    color: transparent;
+        //    margin-bottom: 10px;
+        //    //content: ""!important;
+        //    //font-size: 0;
+        //  }
+        //}
         .bogoflags{
           margin-right: 5px;
         }
