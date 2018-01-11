@@ -30,8 +30,8 @@
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - (54px + 168px));
-    width: -moz-calc(100% - (54px + 168px));
+    width: calc(100% - (54px + 100px));
+    width: -moz-calc(100% - (54px + 100px));
     margin-bottom: 51px;
     @include breakpoint(max-width 660px) {
       width: 100%;
@@ -42,9 +42,17 @@
     display: block;
     position: relative;
     float: left;
-    width: 50%;
-    padding-left: 120px;
+    //width: 50%;
+    //padding-left: 120px;
     @include box-sizing(border-box);
+    &:first-of-type{
+      width: 70%;
+      padding-left: 45px;
+    }
+    &:nth-of-type(2){
+      width: 30%;
+      padding-left: 15px;
+    }
     @include breakpoint(max-width 660px) {
       width: 100%;
       padding-left: 0;
@@ -70,9 +78,9 @@
       padding: 0;
       list-style: none;
       list-style-position: inside;
-      -moz-column-count: 2; /* Firefox */
-      -webkit-column-count: 2; /* Safari and Chrome */
-      column-count: 2;
+      -moz-column-count: 4; /* Firefox */
+      -webkit-column-count: 4; /* Safari and Chrome */
+      column-count: 4;
       li {
         position: relative;
         a {
@@ -105,7 +113,7 @@
     display: block;
     position: relative;
     float: left;
-    width: 168px;
+    width: 100px;
     @include breakpoint(max-width 660px) {
       width: 100%;
     }
@@ -128,7 +136,7 @@
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
-        margin-right: 50%;
+        //margin-right: 50%;
         @include breakpoint(max-width 660px) {
           margin-right: 21px;
         }
