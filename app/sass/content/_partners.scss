@@ -3,6 +3,7 @@
   float: left;
   width: 100%;
   background-color: #fff;
+
   &__wrapper {
     @include display-flex(flex);
     @include flex-wrap(wrap);
@@ -11,11 +12,13 @@
     position: relative;
     float: left;
     width: 100%;
-    @include breakpoint(max-width 660px){
+
+    @include breakpoint(max-width 660px) {
       display: block;
       position: relative;
       float: left;
     }
+
     &--item {
       display: block;
       position: relative;
@@ -25,23 +28,30 @@
       overflow: hidden;
       margin-top: 86px;
       margin-bottom: 86px;
+
       @include breakpoint(max-width 660px) {
         width: 100%;
         height: 80px;
         margin-top: 15px;
         margin-bottom: 15px;
       }
+
       img, svg {
         size: 100%;
         object-fit: contain;
+
         @include breakpoint(max-width 660px) {
           size: auto;
           margin-top: 15px;
           margin-bottom: 15px;
         }
+
       }
+
     }
+
   }
+
   &__form-box {
     position: relative;
     float: left;
@@ -54,6 +64,7 @@
     padding-bottom: 48px;
     @include box-sizing(border-box);
     margin-bottom: 101px;
+
     @include breakpoint(max-width 660px) {
       padding-top: 24px;
       padding-left: 26px;
@@ -61,11 +72,13 @@
       padding-bottom: 28px;
       margin-bottom: 20px;
     }
+
     &--title {
       position: relative;
       float: left;
       width: 100%;
       margin-bottom: 22px;
+
       > h3 {
         width: 100%;
         position: relative;
@@ -77,6 +90,7 @@
         font-family: $ProximaNovaBold;
         font-size: 28px;
       }
+
       > p {
         position: relative;
         float: left;
@@ -87,7 +101,9 @@
         color: #303030;
         font-size: 22px;
       }
+
     }
+
     &--fields {
       display: none;
       position: relative;
@@ -95,20 +111,25 @@
       width: 100%;
       margin-bottom: 64px;
     }
+
     &--line {
       position: relative;
       float: left;
       width: calc(50% - (48px / 2));
+
       @include breakpoint(max-width 660px) {
         width: 100%;
         margin-bottom: 15px;
       }
+
       &:nth-of-type(2) {
         float: right;
         @include breakpoint(max-width 660px) {
           float: left;
         }
+
       }
+
       > label {
         position: relative;
         float: left;
@@ -119,7 +140,9 @@
         font-size: 18px;
         line-height: 18px;
       }
+
     }
+
     &--field {
       position: relative;
       float: left;
@@ -134,6 +157,7 @@
       font-family: $ProximaNovaBold;
       font-size: 18px;
     }
+
     &--submit {
       position: relative;
       float: left;
@@ -150,16 +174,21 @@
       font-size: 24px;
       cursor: pointer;
       @include transition(0.4s);
+
       @include breakpoint(max-width 660px) {
         width: 100%;
         margin-left: 0;
       }
+
       &:hover {
         background-color: transparent;
         border: 1px solid #00365f;
         color: #00365f;
         @include transition(0.4s);
       }
+
     }
+
   }
+
 }
